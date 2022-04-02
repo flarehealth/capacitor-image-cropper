@@ -1,3 +1,3 @@
 export interface CapacitorImageCropperPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  crop(options: { uri: string }): Promise<{ imgPath: string }>;
 }
