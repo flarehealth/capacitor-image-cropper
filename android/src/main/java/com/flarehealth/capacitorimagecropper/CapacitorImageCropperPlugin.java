@@ -57,7 +57,7 @@ public class CapacitorImageCropperPlugin extends Plugin {
       String src = call.getString("uri");
       File dest = new File(getActivity().getCacheDir().getAbsolutePath() + "/CAP_CROP.jpg");
       boolean isAppPath = false;
-      
+
       if (src.contains("~")) {
         isAppPath = true;
         src = src.replace("~", "");
@@ -89,6 +89,8 @@ public class CapacitorImageCropperPlugin extends Plugin {
         options.setAspectRatioOptions(0,
           new AspectRatio("7:4", 7, 4)
         );
+        options.setMaxBitmapSize(10000);
+        options.setCompressionQuality(100);
         UCrop crop = UCrop.of(Uri.fromFile((tempSource)), Uri.fromFile(dest)).withOptions(options);
 
         // Start the UCrop activity and calls the "handleCrop" activity call back
