@@ -8,7 +8,6 @@ import CropViewController
  */
 @objc(CapacitorImageCropperPlugin)
 public class CapacitorImageCropperPlugin: CAPPlugin, CropViewControllerDelegate  {
-    private let implementation = CapacitorImageCropper()
     private var call: CAPPluginCall?
 
     @objc func crop(_ call: CAPPluginCall) {
