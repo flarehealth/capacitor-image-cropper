@@ -28,7 +28,7 @@
     "native"
   ],
   "scripts": {
-    "verify": "npm run verify:ios && npm run verify:android && npm run verify:web",
+    "verify": "yarn run build:ios && yarn run verify:android",
     "install:ios": "cd ios && pod install && cd ..",
     "build:ios": "cd ios && xcodebuild -workspace Plugin.xcworkspace -scheme Plugin && cd ..",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
