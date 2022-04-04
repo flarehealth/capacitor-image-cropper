@@ -1,3 +1,7 @@
 export interface CapacitorImageCropperPlugin {
-  crop(options: { uri: string }): Promise<{ imgPath: string }>;
+  crop(options: CropOptions): Promise<{ imgPath: string }>;
+}
+
+export interface CropOptions {
+  uri: string
 }
