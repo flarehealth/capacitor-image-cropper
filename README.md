@@ -2,87 +2,80 @@
 
 Image cropper for CapacitorJS (**iOS** and **Android** only)
 
-## Publishing Changes
+## Why did we make this?
 
-To learn more about how to publish new changes, [see publishing documentation][#publishing-changes]
+Flare Health could not find a working solution for both Android and iOS for cropping images that was seamless, looked good on both, and did what we needed to do. So we build our own.
 
-## Why did we make this? 
+## Consuming the Plugin
 
-Flare Health could not find a working solution for both Android and iOS for cropping images that was seamless, looked good on both, and did what ne needed to do. So we build our own. 
+This repository builds a Node package that can be installed in other JavaScript applications. You can either install the version published in the `dist/` directory or point to the local version.
 
-## Install
+### Consuming the Published Version
 
 ```bash
 yarn add git+https://github.com/flarehealth/capacitor-image-cropper.git
 yarn run cap sync
 ```
 
-## Developing Locally
+### Consuming the Local Version
 
-If you'd like to develop and improve this locally, you must clone the repo, make changes, and add the package locally
-
-**Example**
+In order to make local development easier, you can add the local version of the plugin to another project. To do this you must clone the repo, make changes, and add the local version of the package to the consuming application.
 
 ```
-yarn add file:<path/to/folder>
+yarn add file:</path/to/repository>
 ```
 
-Everytime you make changes, you must build the plugin for each platform and add the package again to your Capacitor project
+Every time you make changes, you must build the plugin for each platform and add the package again to your Capacitor project
+
+## Using the Plugin
+
+See [here][#usage-documentation] for details
+
+## Updating the Plugin
+
+Here are details for making changes to the plugin.
+
+### Publishing Changes
+
+To learn more about how to publish new changes, [see publishing documentation][#publishing-changes]
+
+### Dependencies
+
+ * Yarn
+
+### Setup
+
+1. Install Node packages
+
+    ```bash
+    yarn install
+    ```
 
 ### iOS
 
-```
-yarn run install:ios// Only if you added a pod dependency to the project
-yarn run build:ios
-```
+Add new dependencies via Cocoapods:
+
+    ```bash
+    yarn run build:ios
+    ```
+
+Build the project:
+
+    ```bash
+    yarn run install:ios
+    ```
 
 ### Android
+
+Build project and run tests:
 
 ```
 yarn run verify:android
 ```
 
-## API
-
-<docgen-index>
-
-* [`crop(...)`](#crop)
-* [Interfaces](#interfaces)
-
-</docgen-index>
-
-<docgen-api>
-<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
-
-### crop(...)
-
-```typescript
-crop(options: CropOptions) => Promise<{ imgPath: string; }>
-```
-
-| Param         | Type                                                |
-| ------------- | --------------------------------------------------- |
-| **`options`** | <code><a href="#cropoptions">CropOptions</a></code> |
-
-**Returns:** <code>Promise&lt;{ imgPath: string; }&gt;</code>
-
---------------------
-
-
-### Interfaces
-
-
-#### CropOptions
-
-| Prop      | Type                |
-| --------- | ------------------- |
-| **`uri`** | <code>string</code> |
-
-</docgen-api>
-
 ## Sources
 
-We utilized popular iOS and Android cropping libraries for their respective platforms. 
+We utilized popular iOS and Android cropping libraries for their respective platforms.
 
 ### iOS
 
@@ -94,3 +87,4 @@ We utilized popular iOS and Android cropping libraries for their respective plat
 
 
 [#publishing-changes]: /documentation/publishing.md
+[#usage-documentation]: /documentation/usage.md
