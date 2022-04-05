@@ -23,22 +23,6 @@ public class CapacitorImageCropperPlugin: CAPPlugin, CropViewControllerDelegate 
         }
     }
     
-    func presentCropViewController(imgSrc: String) {
-        
-        let data = try? Data(contentsOf: URL(string: imgSrc)!)
-        let cropViewController = CropViewController(image: UIImage(data: data!)!)
-        
-        // Set CropViewController options
-        cropViewController.aspectRatioLockEnabled = false
-        cropViewController.toolbarPosition = TOCropViewControllerToolbarPosition.top
-        cropViewController.customAspectRatio = CGSize(width: 7.0, height: 4.0)
-        cropViewController.aspectRatioPickerButtonHidden = true
-        cropViewController.resetAspectRatioEnabled = false
-        
-        cropViewController.delegate = self
-        bridge?.viewController?.present(cropViewController, animated: true, completion: nil)
-    }
-    
     /*
      Cropping is complete, and cropped image is `image` argument
      */
@@ -65,5 +49,21 @@ public class CapacitorImageCropperPlugin: CAPPlugin, CropViewControllerDelegate 
             cropViewController.dismiss(animated: true, completion: nil)
             call?.reject("Cancelled cropping, exiting cropping view.")
         }
+    }
+    
+    private func presentCropViewController(imgSrc: String) {
+        
+        let data = try? Data(contentsOf: URL(string: imgSrc)!)
+        let cropViewController = CropViewController(image: UIImage(data: data!)!)
+        
+        // Set CropViewController options
+        cropViewController.aspectRatioLockEnabled = false
+        cropViewController.toolbarPosition = TOCropViewControllerToolbarPosition.top
+        cropViewController.customAspectRatio = CGSize(width: 7.0, height: 4.0)
+        cropViewController.aspectRatioPickerButtonHidden = true
+        cropViewController.resetAspectRatioEnabled = false
+        
+        cropViewController.delegate = self
+        bridge?.viewController?.present(cropViewController, animated: true, completion: nil)
     }
 }
