@@ -2,6 +2,10 @@
 
 Image cropper for CapacitorJS (**iOS** and **Android** only)
 
+## Publishing Changes
+
+To learn more about how to publish new changes, [see publishing documentation][#publishing-changes]
+
 ## Why did we make this? 
 
 Flare Health could not find a working solution for both Android and iOS for cropping images that was seamless, looked good on both, and did what ne needed to do. So we build our own. 
@@ -87,3 +91,6 @@ We utilized popular iOS and Android cropping libraries for their respective plat
 ### Android
 
 [uCrop](https://github.com/Yalantis/uCrop)
+
+
+[#publishing-changes]: /documentation/publishing.md
