@@ -2,10 +2,10 @@
 node_modules
 
 # iOS files
-Pods
-Podfile.lock
 Build
 xcuserdata
+
+ios/.ruby-gemset
 
 # macOS files
 .DS_Store
