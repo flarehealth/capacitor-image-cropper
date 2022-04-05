@@ -1,10 +1,12 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { CapacitorImageCropperPlugin } from './definitions';
+import type { CapacitorImageCropperPlugin, CropOptions } from './definitions';
 
 export class CapacitorImageCropperWeb extends WebPlugin implements CapacitorImageCropperPlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  async crop(options: CropOptions): Promise<{ imgPath: string }> {
+    console.log('this function is not available on the web', options);
+    return {
+      imgPath: ""
+    };
   }
 }

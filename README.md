@@ -43,6 +43,7 @@ yarn run verify:android
 <docgen-index>
 
 * [`crop(...)`](#crop)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -52,16 +53,26 @@ yarn run verify:android
 ### crop(...)
 
 ```typescript
-echo(options: { imgUri: string; }) => Promise<{ imgPath: string; }>
+crop(options: CropOptions) => Promise<{ imgPath: string; }>
 ```
 
-| Param         | Type                             | Description                                       |
-| ------------- | -------------------------------- | ------------------------------------------------- |
-| **`options`** | <code>{ imgUri: string; }</code> | The file path of the just taken or selected photo |
+| Param         | Type                                                |
+| ------------- | --------------------------------------------------- |
+| **`options`** | <code><a href="#cropoptions">CropOptions</a></code> |
 
-**Returns:** <code>Promise&lt;{ imgPath: string; }&gt;</code> where `imgPath` is the file path of the cropped image
+**Returns:** <code>Promise&lt;{ imgPath: string; }&gt;</code>
 
 --------------------
+
+
+### Interfaces
+
+
+#### CropOptions
+
+| Prop      | Type                |
+| --------- | ------------------- |
+| **`uri`** | <code>string</code> |
 
 </docgen-api>
 
