@@ -1,0 +1,50 @@
+{
+  "api": {
+    "name": "CapacitorImageCropperPlugin",
+    "slug": "capacitorimagecropperplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "crop",
+        "signature": "(options: CropOptions) => Promise<{ imgPath: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "CropOptions"
+          }
+        ],
+        "returns": "Promise<{ imgPath: string; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "CropOptions"
+        ],
+        "slug": "crop"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "CropOptions",
+      "slug": "cropoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "uri",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}

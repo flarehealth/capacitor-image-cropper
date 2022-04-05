@@ -1,0 +1,1 @@
+{"version":3,"file":"definitions.js","sourceRoot":"","sources":["../../src/definitions.ts"],"names":[],"mappings":"","sourcesContent":["export interface CapacitorImageCropperPlugin {\n  crop(options: CropOptions): Promise<{ imgPath: string }>;\n}\n\nexport interface CropOptions {\n  uri: string\n}"]}
