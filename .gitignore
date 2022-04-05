@@ -5,6 +5,8 @@ node_modules
 Build
 xcuserdata
 
+ios/.ruby-gemset
+
 # macOS files
 .DS_Store
 
