@@ -19,6 +19,7 @@ public class CapacitorImageCropperPlugin: CAPPlugin, CropViewControllerDelegate 
           }
         
         DispatchQueue.main.async {
+            print("hello!!!!")
             self.presentCropViewController(imgSrc: src)
         }
     }
@@ -57,9 +58,7 @@ public class CapacitorImageCropperPlugin: CAPPlugin, CropViewControllerDelegate 
         let cropViewController = CropViewController(image: UIImage(data: data!)!)
         
         // Set CropViewController options
-        cropViewController.aspectRatioLockEnabled = false
         cropViewController.toolbarPosition = TOCropViewControllerToolbarPosition.top
-        cropViewController.customAspectRatio = CGSize(width: 7.0, height: 4.0)
         cropViewController.aspectRatioPickerButtonHidden = true
         cropViewController.resetAspectRatioEnabled = false
         
