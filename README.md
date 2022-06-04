@@ -4,7 +4,7 @@ Image cropper for CapacitorJS (**iOS** and **Android** only)
 
 ## Why did we make this?
 
-Flare Health could not find a working solution for both Android and iOS for cropping images that was seamless, looked good on both, and did what we needed to do. So we build our own.
+Flare Health could not find a working solution for both Android and iOS for cropping images that was seamless, looked good on both, and did what we needed to do. So we built our own.
 
 ## Consuming the Plugin
 

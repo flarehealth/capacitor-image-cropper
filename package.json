@@ -32,17 +32,17 @@
     "install:ios": "cd ios && pod install && cd ..",
     "build:ios": "cd ios && xcodebuild -workspace Plugin.xcworkspace -scheme Plugin && cd ..",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
-    "verify:web": "npm run build",
-    "lint": "npm run eslint && npm run prettier -- --check && npm run swiftlint -- lint",
-    "fmt": "npm run eslint -- --fix && npm run prettier -- --write && npm run swiftlint -- --fix --format",
+    "verify:web": "yarn run build",
+    "lint": "yarn run eslint && yarn run prettier -- --check && yarn run swiftlint -- lint",
+    "fmt": "yarn run eslint -- --fix && yarn run prettier -- --write && yarn run swiftlint -- --fix --format",
     "eslint": "eslint . --ext ts",
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
     "swiftlint": "node-swiftlint",
     "docgen": "docgen --api CapacitorImageCropperPlugin --output-readme README.md --output-json dist/docs.json",
-    "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
+    "build": "yarn run clean && yarn run docgen && tsc && rollup -c rollup.config.js",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "yarn run build"
   },
   "devDependencies": {
     "@capacitor/android": "^3.0.0",
