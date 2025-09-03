@@ -8,7 +8,7 @@ ext {
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.2.1'
@@ -43,7 +43,6 @@ android {
 
 allprojects {
   repositories {
-    jcenter()
     mavenCentral()
     maven { url "https://jitpack.io" }
     google()
@@ -54,7 +53,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':capacitor-android')
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
-    implementation "com.github.yalantis:ucrop:2.2.6" // needed
+    implementation "com.github.yalantis:ucrop:2.2.11" // needed
     implementation group: 'commons-io', name: 'commons-io', version: '2.5'
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
